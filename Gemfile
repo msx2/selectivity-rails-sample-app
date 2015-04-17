@@ -60,6 +60,4 @@ gem 'slim-rails'
 # Front-end
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
-
-
-gem 'selectivity-rails', path: '/Users/msx2/code/open-source/selectivity-rails'
+gem 'selectivity-rails'
