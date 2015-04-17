@@ -1,0 +1,18 @@
+h1
+  code> selectivity-rails
+  | test form
+
+.row
+  .col-sm-6.col-md-4
+    = simple_form_for :test, url: root_path do |form|
+      = form.input :multiple_select, collection: I18n.t('countries'),
+                                    input_html: {multiple: 'multiple', data: {toggle: 'selectivity'}}
+
+      = form.input :single_select, collection: I18n.t('countries'),
+                                  input_html: {data: {toggle: 'selectivity'}}
+
+      = form.button :submit, 'Submit', class: 'btn-primary'
+
+- if params.has_key?(:test)
+  h3 Request
+  pre = JSON.pretty_generate params[:test]
