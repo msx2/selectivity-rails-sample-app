@@ -2,17 +2,27 @@ h1
   code> selectivity-rails
   | test form
 
-.row
-  .col-sm-6.col-md-4
-    = simple_form_for :test, url: root_path do |form|
-      = form.input :multiple_select, collection: I18n.t('countries'),
+hr
+
+= simple_form_for :test, url: root_path do |form|
+  h3 Standard select fields
+  .row
+    .col-sm-6.col-md-4 = form.input :multiple_select, collection: I18n.t('countries'),
                                     input_html: {multiple: 'multiple', data: {toggle: 'selectivity'}}
 
-      = form.input :single_select, collection: I18n.t('countries'),
-                                  input_html: {data: {toggle: 'selectivity'}}
+    .col-sm-6.col-md-4 = form.input :single_select, collection: I18n.t('countries'),
+                                    input_html: {data: {toggle: 'selectivity'}}
 
-      = form.button :submit, 'Submit', class: 'btn-primary'
+  h3 User input
+  .row
+    .col-sm-6.col-md-4 = form.input :email_addresses, as: :select,
+                                    input_html: {data: {toggle: 'selectivity-email'}}
+
+  = form.button :submit, 'Submit', class: 'btn-primary'
+
 
 - if params.has_key?(:test)
-  h3 Request
+  hr
+
+  h2 Sent request
   pre = JSON.pretty_generate params[:test]

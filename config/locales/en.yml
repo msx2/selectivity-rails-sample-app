@@ -20,7 +20,17 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  simple_form:
+    labels:
+      test:
+        multiple_select: 'Multiple select list'
+        single_select: 'Single select list'
+        email_addresses: 'Multiple e-mail addresses'
+    hints:
+      test:
+        multiple_select: 'Multiple elements from the provided list'
+        single_select: 'Single element from the provided list'
+        email_addresses: 'Use comma or hit enter to separate e-mails'
   countries:
     - Albania
     - Andorra
