@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'Form', type: :feature, js: true do
   ['320x480', '480x320', '480x800', '800x480', '768x1280', '1280x768', '1024x768', '1366x768'].each do |resolution|
-    describe "Given viewport resolution: #{resolution}" do
+    context "Given viewport resolution: #{resolution}" do
       before do
         width, height = resolution.split('x')
         page.driver.browser.manage.window.resize_to(width, height)
