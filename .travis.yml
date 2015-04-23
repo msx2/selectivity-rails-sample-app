@@ -8,3 +8,7 @@ before_script:
 script:
   - bundle exec rake db:migrate --trace
   - bin/rspec
+notifications:
+  email:
+    on_success: change
+    on_failure: always
