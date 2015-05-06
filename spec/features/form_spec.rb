@@ -11,14 +11,14 @@ describe 'Form', type: :feature, js: true do
       it 'uses Selectivity.js inputs' do
         visit root_path
 
-        selectivity_select('Netherlands', from: '#test_multiple_select')
+        selectivity_select('Netherlands', from: 'Multiple select list')
         selectivity_select('Cyprus', 'Russia', from: '#test_multiple_select')
-        selectivity_unselect('Netherlands', from: '#test_multiple_select')
+        selectivity_unselect('Netherlands', from: 'Multiple select list')
         selectivity_unselect('Russia', 'Cyprus', from: '#test_multiple_select')
-        selectivity_select('United Kingdom', from: '#test_multiple_select')
+        selectivity_select('United Kingdom', from: 'Multiple select list')
         selectivity_select('Spain', from: '#test_multiple_select')
 
-        selectivity_select('Germany', from: '#test_single_select')
+        selectivity_select('Germany', from: 'Single select list')
         selectivity_unselect('Germany', from: '#test_single_select')
         selectivity_select('Poland', 'Germany', from: '#test_single_select') # will only select Poland
       end
