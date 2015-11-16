@@ -50,6 +50,7 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'poltergeist'
   gem 'selenium-webdriver'
 end
 
