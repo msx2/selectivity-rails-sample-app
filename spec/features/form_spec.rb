@@ -21,6 +21,8 @@ describe 'Form', type: :feature, js: true do
         selectivity_select('Germany', from: 'Single select list')
         selectivity_unselect('Germany', from: '#test_single_select')
         selectivity_select('Poland', 'Germany', from: '#test_single_select') # will only select Poland
+
+        selectivity_select('Active', from: '#test_active_or_not')
       end
     end
   end
