@@ -18,6 +18,11 @@ hr
     .col-sm-6.col-md-4 = form.input :email_addresses, as: :select,
                                     input_html: {data: {toggle: 'selectivity-email'}}
 
+  h3 Similar options
+  .row
+    .col-sm-6.col-md-4 = form.input :active_or_not, label: false, collection: %w(Active Inactive),
+                                  input_html: {data: {toggle: 'selectivity'}}
+
   = form.button :submit, 'Submit', class: 'btn-primary'
 
 
