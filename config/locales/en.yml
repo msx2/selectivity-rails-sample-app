@@ -26,11 +26,13 @@ en:
         multiple_select: 'Multiple select list'
         single_select: 'Single select list'
         email_addresses: 'Multiple e-mail addresses'
+        tags: 'Multiple tags'
     hints:
       test:
         multiple_select: 'Multiple elements from the provided list'
         single_select: 'Single element from the provided list'
         email_addresses: 'Use comma or hit enter to separate e-mails'
+        tags: 'User direct input, no select to choose from'
   countries:
     - Albania
     - Andorra
